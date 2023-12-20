@@ -12,9 +12,9 @@ const CategoryItem = ({ category }) => {
             }}
           />
           {/* <img /> */}
-          <div class="category-body-container">
-            <h2 class="">{title}</h2>
-            <p class="">Shop Now</p>
+          <div className="category-body-container">
+            <h2 className="">{title}</h2>
+            <p className="">Shop Now</p>
           </div>
         </div>
     );
