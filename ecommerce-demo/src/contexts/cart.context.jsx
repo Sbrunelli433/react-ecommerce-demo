@@ -20,28 +20,30 @@ const addCartItem = (cartItems, productToAdd) => {
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
-const removeCartItem = (cartItems, productToRemove) => {
+const removeCartItem = (cartItems, itemToRemove) => {
   //find if cartItems contains productToRemove
   const existingCartItem = cartItems.find(
-    (cartItem) => cartItem.id === productToRemove.id
+    (cartItem) => cartItem.id === itemToRemove.id
   );
 
   if (existingCartItem.quantity === 1) {
-    return cartItems.filter((cartItem) => cartItem.id !== productToRemove.id);
+    return cartItems.filter((cartItem) => cartItem.id !== itemToRemove.id);
   }
 
   //if found, decrement quantity
   if (existingCartItem) {
     return cartItems.map((cartItem) =>
-      cartItem.id === productToRemove.id
+      cartItem.id === itemToRemove.id
         ? { ...cartItem, quantity: cartItem.quantity - 1 }
         : cartItem
     );
   }
 
   //return new array with modified/new cartItems
-  return [...cartItems, { ...productToRemove, quantity: 1 }];
+  return [...cartItems, { ...itemToRemove, quantity: 1 }];
 };
+
+const removeProduct = (cartItems, productToRemove) => cartItems.filter((cartItem) => cartItem.id !== productToRemove.id);
 
 // as the actual value you want to access
 export const CartContext = createContext({
@@ -51,6 +53,7 @@ export const CartContext = createContext({
   addItemToCart: () => {},
   cartCount: 0,
   removeItemFromCart: () => {},
+  removeProductFromCart: () => {},
 });
 
 // cart provider is the functional component
@@ -70,8 +73,13 @@ export const CartProvider = ({ children }) => {
   const addItemToCart = (productToAdd) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   };
-  const removeItemFromCart = (productToRemove) => {
-    setCartItems(removeCartItem(cartItems, productToRemove));
+
+  const removeItemFromCart = (itemToRemove) => {
+    setCartItems(removeCartItem(cartItems, itemToRemove));
+  };
+
+  const removeProductFromCart = (productToRemove) => {
+    setCartItems(removeProduct(cartItems, productToRemove));
   };
 
   const value = {
@@ -79,6 +87,7 @@ export const CartProvider = ({ children }) => {
     setIsCartOpen,
     addItemToCart,
     removeItemFromCart,
+    removeProductFromCart,
     cartItems,
     cartCount,
   };
