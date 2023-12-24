@@ -6,6 +6,7 @@ import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
 import { UserContext } from "./contexts/user.context";
 import Shop from "./routes/shop/shop.component";
+import Checkout from "./components/checkout/checkout.component";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route path="/" index element={<Home />} />
         <Route path="shop" index element={<Shop />} />
+        <Route path="checkout" index element={<Checkout />} />
         <Route
           path="auth"
           element={
