@@ -1,7 +1,6 @@
 import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import Image from "../../assets/logo.png";
+import { ReactComponent as Logo } from "../../assets/crown.svg";
 import "./navigation.styles.scss";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
@@ -18,7 +17,7 @@ const Navigation = () => {
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img src={Image} alt="logo" className="logo" />
+          <Logo className="logo" />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
