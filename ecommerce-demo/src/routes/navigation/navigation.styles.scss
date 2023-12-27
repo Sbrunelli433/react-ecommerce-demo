@@ -1,14 +1,17 @@
 .navigation {
-    height: 70px;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 75px;
+    align-items: center;
   
     .logo-container {
       height: 100%;
-      width: 70px;
       padding: 25px;
+      .logo {
+        width: 50%;
+      }
     }
   
     .nav-links-container {
@@ -24,4 +27,3 @@
       }
     }
   }
-  

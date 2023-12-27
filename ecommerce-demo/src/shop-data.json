@@ -1,57 +1,48 @@
 [
     {
       "id": 1,
-      "name": "Brown Brim",
-      "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "price": 25
+      "name": "Caramel Cashmere",
+      "description": "Notes of brown sugar, coffee, and cookies.",
+      "ingredients": "Saporified oils (beef tallow, coconut oil, olive oil, rice bran oil, castor oil), distilled water, sodium hydroxide (lye), fragrance, sodium lactate",
+      "imageUrl": "https://i.ibb.co/7K8ng6f/cashmere.png",
+      "price": 25,
+      "season_id": 1
     },
     {
       "id": 2,
-      "name": "Blue Beanie",
-      "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
-      "price": 18
+      "name": "Fairy Wings",
+      "description": "Notes of sugar plums and enchanted woods.",
+      "ingredients": "Saporified oils (beef tallow, coconut oil, olive oil, rice bran oil, shea butter, castor oil), distilled water, sodium hydroxide (lye), fragrance, sodium lactate",
+      "imageUrl": "https://i.ibb.co/6Pv0WZL/fairy-wings-box.png",
+      "price": 18,
+      "season_id": 1
     },
     {
       "id": 3,
-      "name": "Brown Cowboy",
-      "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
-      "price": 35
+      "name": "Hearth",
+      "description": "Notes of woods, leather, and that cozy spot by the fire",
+      "ingredients": "Saporified oils (beef tallow, coconut oil, olive oil, castor oil), distilled water, sodium hydroxide (lye), fragrance, mica colorant",
+      "imageUrl": "https://i.ibb.co/fGfrc2x/hearthbox.png",
+      "price": 35,
+      "season_id": 1
     },
     {
       "id": 4,
-      "name": "Grey Brim",
-      "imageUrl": "https://i.ibb.co/RjBLWxB/grey-brim.png",
-      "price": 25
+      "name": "Night Sky",
+      "description": "Notes of citrus, nectar, musk, and woods",
+      "ingredients": "Saporified oils (beef tallow, coconut oil, olive oil, castor oil), distilled water, sodium hydroxide (lye), fragrance, mica colorant",
+      "imageUrl": "https://i.ibb.co/xGSJYBb/nightsky-box.png",
+      "price": 25,
+      "season_id": 1
     },
     {
       "id": 5,
-      "name": "Green Beanie",
-      "imageUrl": "https://i.ibb.co/YTjW3vF/green-beanie.png",
-      "price": 18
-    },
-    {
-      "id": 6,
-      "name": "Palm Tree Cap",
-      "imageUrl": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
-      "price": 14
-    },
-    {
-      "id": 7,
-      "name": "Red Beanie",
-      "imageUrl": "https://i.ibb.co/bLB646Z/red-beanie.png",
-      "price": 18
-    },
-    {
-      "id": 8,
-      "name": "Wolf Cap",
-      "imageUrl": "https://i.ibb.co/1f2nWMM/wolf-cap.png",
-      "price": 14
-    },
-    {
-      "id": 9,
-      "name": "Blue Snapback",
-      "imageUrl": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
-      "price": 16
+      "name": "Wildflower",
+      "description": "Notes of lavender, sweet pear, vanilla, and citrus",
+      "ingredients": "Saporified oils (beef tallow, coconut oil, shea butter, olive oil, rice bran oil, castor oil), distilled water, sodium hydroxide (lye), fragrance, sodium lactate mica colorant",
+      "imageUrl": "https://i.ibb.co/j8YSxgH/wildflower-box.png",
+      "price": 18,
+      "season_id": 1
     }
   ]
   
