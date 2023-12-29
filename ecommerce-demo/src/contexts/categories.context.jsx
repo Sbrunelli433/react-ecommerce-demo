@@ -3,29 +3,30 @@ import { addCollectionAndDocuments, getCategoriesAndDocuments } from "../utils/f
 import SHOP_DATA from '../shop-data.js';
 
 // as the actual value you want to access
-export const ProductsContext = createContext({
-    products: [],
+export const CategoriesContext = createContext({
+    categoriesMap: {},
 });
 
 // product provider is the functional component
-export const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+export const CategoriesProvider = ({ children }) => {
+  const [categoriesMap, setCategoriesMap] = useState({});
 
   //use async function in useEffect()
   useEffect(() => {
     const getCategoriesMap = async () => {
       const categoryMap = await getCategoriesAndDocuments();
       console.log(categoryMap);
+      setCategoriesMap(categoryMap);
     }
     getCategoriesMap();
   }, []);
 
-  const value = { products };
+  const value = { categoriesMap };
 
   return (
-    <ProductsContext.Provider value={value}>
+    <CategoriesContext.Provider value={value}>
       {children}
-    </ProductsContext.Provider>
+    </CategoriesContext.Provider>
   );
 };
 
