@@ -24,6 +24,7 @@ export const BaseButton = styled.button`
     border: 1px solid black;
   }
 `;
+
 export const GoogleSignInButton = styled(BaseButton)`
   &.google-sign-in {
     background-color: #4285f4;
@@ -35,6 +36,7 @@ export const GoogleSignInButton = styled(BaseButton)`
     }
   }
 `;
+
 export const InvertedButton = styled(BaseButton)`
   &.inverted {
     background-color: white;
