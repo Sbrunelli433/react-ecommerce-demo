@@ -9,7 +9,7 @@ import {
 } from "./navigation.styles.jsx";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
-import { signOutUser } from "../../utils/firebase.utils";
+import { signOutUser } from "../../utils/firebase/firebase.utils.js";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 

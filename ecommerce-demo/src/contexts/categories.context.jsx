@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { addCollectionAndDocuments, getCategoriesAndDocuments } from "../utils/firebase.utils.js";
+import { addCollectionAndDocuments, getCategoriesAndDocuments } from "../utils/firebase/firebase.utils.js";
 import SHOP_DATA from '../shop-data.js';
 
 // as the actual value you want to access
