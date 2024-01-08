@@ -9,6 +9,7 @@ import { setCategories } from '../../store/categories/categories.action';
 import CategoriesPreview from '../categories-preview/categories-preview.component';
 import Category from '../category/category.component';
 
+//functional Shop component with nested routes for each Category
 const Shop = () => {
   const dispatch = useDispatch();
 
