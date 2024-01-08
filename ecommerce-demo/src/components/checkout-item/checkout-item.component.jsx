@@ -1,36 +1,38 @@
 import { useContext } from "react";
-import { CartContext } from "../../contexts/cart.context";
+import { CartContext } from '../../contexts/cart.context';
 
-import "./checkout-item.styles.scss";
+import {
+  CheckoutItemContainer,
+  ImageContainer,
+  BaseSpan,
+  Quantity,
+  Arrow,
+  Value,
+  RemoveButton,
+} from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
-  const { removeProductFromCart, addItemToCart, removeItemFromCart } = useContext(CartContext);
+  const { removeProductFromCart, addItemToCart, removeItemFromCart } =
+    useContext(CartContext);
   const removeProductHandler = () => removeProductFromCart(cartItem);
   const increaseQuantityHandler = () => addItemToCart(cartItem);
-  const decreaseQuantitykHandler = () => removeItemFromCart(cartItem);
-  
+  const decreaseQuantityHandler = () => removeItemFromCart(cartItem);
 
   return (
-    <div className="checkout-item-container">
-      <div className="image-container">
-        <img src={imageUrl} alt={name} />
-      </div>
-      <span className="name"> {name}</span>
-      <span className="quantity">
-        <div className="arrow" onClick={decreaseQuantitykHandler}>
-          &#10094;
-        </div>
-        <span className="value">{quantity}</span>
-        <div className="arrow" onClick={increaseQuantityHandler}>
-          &#10095;
-        </div>
-      </span>
-      <span className="price">{price}</span>
-      <div className="remove-button" onClick={removeProductHandler}>
-        &#10005;
-      </div>
-    </div>
+    <CheckoutItemContainer>
+      <ImageContainer>
+        <img src={imageUrl} alt={`${name}`} />
+      </ImageContainer>
+      <BaseSpan> {name} </BaseSpan>
+      <Quantity>
+        <Arrow onClick={decreaseQuantityHandler}>&#10094;</Arrow>
+        <Value>{quantity}</Value>
+        <Arrow onClick={increaseQuantityHandler}>&#10095;</Arrow>
+      </Quantity>
+      <BaseSpan> {price}</BaseSpan>
+      <RemoveButton onClick={removeProductHandler}>&#10005;</RemoveButton>
+    </CheckoutItemContainer>
   );
 };
 
