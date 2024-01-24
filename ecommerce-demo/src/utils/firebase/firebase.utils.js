@@ -41,7 +41,7 @@ googleProvider.setCustomParameters({
 export const createUserProfileDocument = async (userAuth) => {
   if (!userAuth) return;
 
-  console.log(userAuth);
+  // console.log(userAuth);
 };
 
 export const auth = getAuth();
@@ -58,7 +58,7 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
 
   //set event methods for objectsToAdd
   objectsToAdd.forEach((object) => {
-    console.log(object);
+    // console.log(object);
     const docRef = doc(collectionRef, object.title.toLowerCase());
     batch.set(docRef, object);
   });
